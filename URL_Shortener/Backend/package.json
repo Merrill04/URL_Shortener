@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "migrate": "ts-node src/db/migrate.ts"
   },
   "keywords": [],
   "author": "",
