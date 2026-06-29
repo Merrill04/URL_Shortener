@@ -25,7 +25,7 @@ export async function registerUser(email: string, password: string, name: string
 
     const result = await pool.query<User>(
         `Insert into users (email, password_hash, name)
-        Values (1$, 2$, 3$)
+        Values ($1, $2, $3)
         RETURNING id, email, name, created_at`,
         [email, passwordHash, name]
     );
