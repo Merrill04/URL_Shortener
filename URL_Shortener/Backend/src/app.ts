@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import pool from './db';
 import authRoutes from './routes/auth.routes';
 import { errorHandler } from './middlewares/errorHandler';
+import urlRoutes from './routes/url.routes';
 
 dotenv.config();
 
@@ -27,7 +28,10 @@ app.get('/health', async (_req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use('/api/urls', urlRoutes);
 app.use(errorHandler)
+
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

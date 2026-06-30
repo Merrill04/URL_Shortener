@@ -47,7 +47,7 @@ export async function createUrl(input: CreateUrlInput){
     return result.rows[0];
 }
 
-export async function getUserUrls(userId: string, page: 1, limit: 10){
+export async function getUserUrls(userId: string, page: number = 1, limit: number = 10){
     const offset = (page - 1) * limit;
 
     const result = await pool.query(
