@@ -143,7 +143,7 @@ async function generateUniqueShortCode(): Promise<string>{
         }
     }
 
-    throw {status:500, message: 'Coulld not generate short code please try again later'}
+    throw {status:500, message: 'Could not generate short code please try again later'}
 }
 
 function isValidUrl(url: string) : boolean{

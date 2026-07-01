@@ -10,6 +10,6 @@ router.post('/', createUrl);
 router.get('/',listUrls);
 router.get('/:id', getUrl);
 router.patch('/:id', updateUrl);
-router.post('/:id', deleteUrl);
+router.delete('/:id', deleteUrl);
 
 export default router;
